@@ -10,6 +10,11 @@ Definitivamente no son ejemplos de la mejor forma de "resolver" los problemas qu
 
 La intencion no es optimizar los graficos en esta serie, sino como resolver otros problemas de mecanicas.
 
+Listado:
+Nombre, Plataforma.
+
+Ahorcado - Consola - .NET Core
+
  
 
 
