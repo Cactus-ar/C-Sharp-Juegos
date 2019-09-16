@@ -10,15 +10,10 @@ namespace SokobanConsola
 
     public class Nivel
     {
-
-
         public int Id { get; set; }
-        public bool NivelIniciado { get; set; }
         public int Ancho { get; set; }
         public int Alto { get; set; }
         public XmlNodeList DibujoNivel { get; set; }
-        
-
 
         public Nivel(int nivel)
         {

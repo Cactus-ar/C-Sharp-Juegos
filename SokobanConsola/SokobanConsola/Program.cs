@@ -9,69 +9,65 @@ namespace SokobanConsola
             Arriba,
             Abajo,
             Izquierda,
-            Derecha
+            Derecha,
+            Quieto
         };
 
-        enum Simbolos
-        {
-            Jugador = '@',
-            Pared = '#',
-            Caja = '$',
-            Piso = ' ',
-            Objetivo = '.',
-            CajaColocada = '*'
-        };
+      
 
-
-        struct Jugador
+       struct Jugador
         {
             public int posX;
             public int posY;
         }
 
-
-        Simbolos[,] mapa;
-        Jugador[] posJugador;
-        Direccion direccion;
-
-
-        public static ConsoleColor DefFore { get; set; }
-        public static ConsoleColor DefBack { get; set; }
-        public static ConsoleColor ColorFrente { get; set; }
-        public static ConsoleColor ColorFondo { get; set; }
+        private static Direccion direccion;
+        private static Jugador posJugador;
+        private static int nivel = 0;
+        private static int opcion;
+        private static ConsoleColor DefFore { get; set; }
+        private static ConsoleColor DefBack { get; set; }
+        private static ConsoleColor ColorFrente { get; set; }
+        private static ConsoleColor ColorFondo { get; set; }
+        public static Nivel NivelJugando { get; private set; }
+        private static char[,] Mapa;
         
 
         static void Main(string[] args)
         {
             
-            bool salir = false;
-            int nivel = 0;
-
             //Guardar los colores de la consola por defecto que usa el usuario
             DefFore = Console.ForegroundColor;
             DefBack = Console.BackgroundColor;
             ColorFrente = ConsoleColor.Green;   //iniciar en verde sobre negro
             ColorFondo = ConsoleColor.Black;
+            posJugador.posX = 0;
+            posJugador.posY = 0;
+            direccion = Direccion.Quieto;
+            
 
-          
+
+            bool salir = false;
+            
             do
             {
-
-                int opcion = MenuInicial(nivel);
+                opcion = MenuInicial(nivel);
 
                 switch (opcion)
                 {
                     case 1:
-                        
-                        Nivel NivelJugando = new Nivel(1)
-                        {
-                            NivelIniciado = true,
-                            
-                        };
+
+                        NivelJugando = new Nivel(1);
+                        Mapa[NivelJugando.Alto, NivelJugando.Ancho] = new char();
+                        GenerarMapa();
+                        BuscarJugador();
                         PantallaJuego();
+                        
                         break;
                     case 2:
                         nivel = SeleccionNivel(nivel);
+                        NivelJugando = new Nivel(nivel);
+                        PantallaJuego();
                         //seleccinar nivel
                         break;
                     case 3:
@@ -116,18 +112,17 @@ namespace SokobanConsola
             Console.WriteLine("\t4.- Salir");
             Console.WriteLine("---------------------------------------");
             Console.Write("Ingrese una Opcion -> ");
-            int opcion;
+            int seleccion;
             try
             {
-                opcion = (int)Convert.ToInt32(Console.ReadLine());
+                seleccion = (int)Convert.ToInt32(Console.ReadLine());
             }
             catch (Exception)
             {
-
                 return 0;
             }
 
-            return opcion;
+            return seleccion;
 
         }
 
@@ -225,7 +220,7 @@ namespace SokobanConsola
             int pasos = 0;
             Console.BackgroundColor = ColorFondo;
             Console.ForegroundColor = ColorFrente;
-            GenerarMapa();
+            //GenerarMapa();
 
             do
             {
@@ -235,9 +230,13 @@ namespace SokobanConsola
                 Console.WriteLine("-----------------------------------------");
                 Console.WriteLine(" Nivel: " + NivelJugando.Id + "\tPasos: " + pasos);
                 Console.WriteLine("-----------------------------------------");
-                foreach (var item in NivelJugando.Mapa)
+                for (int i = 0; i < NivelJugando.Alto; i++)
                 {
-                    Console.Write(item.ToString());
+                    for (int j = 0; j < NivelJugando.Ancho; j++)
+                    {
+                        Console.Write(Mapa[i,j]);
+                    }
+                    Console.Write("\n");
                 }
                 Console.WriteLine();
                 Console.WriteLine("------------------------------------------");
@@ -250,18 +249,22 @@ namespace SokobanConsola
                 {
 
                     case ConsoleKey.DownArrow:
+                        direccion = Direccion.Abajo;
                         pasos++;
                         break;
 
                     case ConsoleKey.LeftArrow:
+                        direccion = Direccion.Izquierda;
                         pasos++;
                         break;
 
                     case ConsoleKey.RightArrow:
+                        direccion = Direccion.Derecha;
                         pasos++;
                         break;
 
                     case ConsoleKey.UpArrow:
+                        direccion = Direccion.Arriba;
                         pasos++;
                         break;
 
@@ -273,18 +276,46 @@ namespace SokobanConsola
             return;
         }
 
-        static void GenerarMapa()
+        static void BuscarJugador()
         {
-            for (int i = 0; i < NivelJugando.Ancho; i++)
+
+            for (int i = 0; i < NivelJugando.DibujoNivel.Count; i++) //Cantidad de Lineas
             {
-                for (int j = 0; j < NivelJugando.Alto; j++)
+                string linea = NivelJugando.DibujoNivel.Item(i).InnerText.ToString();
+                int largo = linea.Length;
+
+                for (int j = 0; j < largo; j++)
                 {
-                    //                    Console.WriteLine("\t" + nivel.DibujoNivel.Item(i).InnerText.ToString());
-                    NivelJugando.Mapa[i, j] = Convert.ToChar(NivelJugando.DibujoNivel.Item(i).InnerText.Substring(j, 1));
+                    char busqueda = Convert.ToChar(linea.Substring(j, 1));
+                    if (busqueda == '@')
+                    {
+                        posJugador.posX = i;
+                        posJugador.posY = j;
+                        return;
+
+                    }
 
                 }
 
             }
+
+        }
+
+        static void GenerarMapa()
+        {
+            for (int i = 0; i < NivelJugando.DibujoNivel.Count; i++) //Cantidad de Lineas
+            {
+                string linea = NivelJugando.DibujoNivel.Item(i).InnerText.ToString();
+                int largo = linea.Length;
+
+                for (int j = 0; j < largo; j++)
+                {
+                    Mapa[i,j] = Convert.ToChar(linea.Substring(j, 1));
+
+                }
+
+            }
+            return;
         }
 
     }
