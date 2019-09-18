@@ -18,6 +18,8 @@ Adivina el Numero   - Consola - .NET Core
 Dados               - Consola - .NET Core
 Sokoban             - Consola - .NET Core
 Torre de Hanoi      - Consola - .NET Core
+Ta Te Ti            - Consola - .NET Core
+
 
  
 
