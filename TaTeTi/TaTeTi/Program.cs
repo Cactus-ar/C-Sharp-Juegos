@@ -512,7 +512,7 @@ namespace TaTeTi
                 if (ganador == 'X')
                     return 1;
                 else
-                    return 0;
+                    return 2;
 
             }
             else if(movidas[3].Jugador != " " && movidas[4].Jugador != " " && movidas[5].Jugador != " " &&
@@ -522,7 +522,7 @@ namespace TaTeTi
                 if (ganador == 'X')
                     return 1;
                 else
-                    return 0;
+                    return 2;
             }
             else if(movidas[6].Jugador != " " && movidas[7].Jugador != " " && movidas[8].Jugador != " " &&
                 movidas[6].Jugador == movidas[7].Jugador && movidas[7].Jugador == movidas[8].Jugador)
@@ -531,7 +531,7 @@ namespace TaTeTi
                 if (ganador == 'X')
                     return 1;
                 else
-                    return 0;
+                    return 2;
             }
 
             //Chequear Vertical (036 + 147 + 258)
@@ -542,7 +542,7 @@ namespace TaTeTi
                 if (ganador == 'X')
                     return 1;
                 else
-                    return 0;
+                    return 2;
             }
             else if (movidas[1].Jugador != " " && movidas[4].Jugador != " " && movidas[7].Jugador != " " &&
                 movidas[1].Jugador == movidas[4].Jugador && movidas[4].Jugador == movidas[7].Jugador)
@@ -551,7 +551,7 @@ namespace TaTeTi
                 if (ganador == 'X')
                     return 1;
                 else
-                    return 0;
+                    return 2;
             }
             else if (movidas[2].Jugador != " " && movidas[5].Jugador != " " && movidas[8].Jugador != " " &&
                 movidas[2].Jugador == movidas[5].Jugador && movidas[5].Jugador == movidas[8].Jugador)
@@ -560,7 +560,7 @@ namespace TaTeTi
                 if (ganador == 'X')
                     return 1;
                 else
-                    return 0;
+                    return 2;
             }
 
             //Chequear Cruzadas (048 + 246)
@@ -571,7 +571,7 @@ namespace TaTeTi
                 if (ganador == 'X')
                     return 1;
                 else
-                    return 0;
+                    return 2;
             }
             else if (movidas[2].Jugador != " " && movidas[4].Jugador != " " && movidas[6].Jugador != " " &&
                 movidas[2].Jugador == movidas[4].Jugador && movidas[4].Jugador == movidas[6].Jugador)
@@ -580,7 +580,7 @@ namespace TaTeTi
                 if (ganador == 'X')
                     return 1;
                 else
-                    return 0;
+                    return 2;
             }
             //Chequear por un Empate
             else if (movidas[0].Posicion == " " && movidas[1].Posicion == " " && movidas[2].Posicion == " " && movidas[3].Posicion == " " &&
