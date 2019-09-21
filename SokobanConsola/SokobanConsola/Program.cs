@@ -59,7 +59,7 @@ namespace SokobanConsola
 
                         NivelJugando = new Nivel(1);
                         Mapa[NivelJugando.Alto, NivelJugando.Ancho] = new char();
-                        GenerarMapa();
+                        GenerarMapa(Mapa);
                         BuscarJugador();
                         PantallaJuego();
                         
@@ -301,7 +301,7 @@ namespace SokobanConsola
 
         }
 
-        static void GenerarMapa()
+        static void GenerarMapa(char[,] Mapa)
         {
             for (int i = 0; i < NivelJugando.DibujoNivel.Count; i++) //Cantidad de Lineas
             {

@@ -13,9 +13,10 @@ La intencion no es optimizar los graficos en esta serie, sino como resolver otro
 Listado:
 Nombre, Plataforma.
 
-Ahorcado            - Consola - .NET Core
+Ahorcado            - Consola - .NET Core<LF>
 Adivina el Numero   - Consola - .NET Core
 Dados               - Consola - .NET Core
+BlackJack           - Consola - .NET Core
 Sokoban             - Consola - .NET Core
 Torre de Hanoi      - Consola - .NET Core
 Ta Te Ti            - Consola - .NET Core
