@@ -13,15 +13,18 @@ La intencion no es optimizar los graficos en esta serie, sino como resolver otro
 Listado:
 Nombre, Plataforma.
 
-Ahorcado            - Consola   - .NET Core
-Adivina el Numero   - Consola   - .NET Core
-Dados               - Consola   - .NET Core
-BlackJack           - Consola   - .NET Core
-Sokoban             - Consola   - .NET Core
-Torre de Hanoi      - Consola   - .NET Core
-Ta Te Ti            - Consola   - .NET Core
-Numeros Lo Shu      - Consola   - .NET Core
-Snake               - Winform   - .Net Framework 4.x
+Nombre            | Tipo         | Framework
+----------------- | ------------ | -------------------
+Ahorcado          | Consola      | NET Core
+Adivina el Numero | Consola      | NET Core
+Dados             | Consola      | NET Core
+BlackJack         | Consola      | NET Core
+Sokoban           | Consola      | NET Core
+Torre de Hanoi    | Consola      | NET Core
+Ta Te Ti          | Consola      | NET Core
+Numeros Lo Shu    | Consola      | NET Core
+Snake             | Winform      | Net Framework 4.x
+Pong              | Winform      | Net Framework 4.x
 
 
 
