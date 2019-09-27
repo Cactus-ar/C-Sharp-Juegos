@@ -1,0 +1,15 @@
+﻿<Window x:Class="MemoTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MemoTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="504.877" Width="434.911">
+    <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="346" Margin="0,70,0,0" VerticalAlignment="Top" Width="425" >
+        <Label x:Name="label" Content="Segundos:" Canvas.Left="209" Canvas.Top="-45" Width="92" FontSize="18"/>
+        <Label x:Name="lbl_segundos" Content="0" Canvas.Left="318" Canvas.Top="-45" Width="73" FontSize="18" Height="36"/>
+        <Button x:Name="btn_nueva" Content="Nueva" Canvas.Left="308" Canvas.Top="364" Width="75" FontSize="14" Click="Btn_nueva_Click"/>
+        <Label x:Name="lbl_gano" Content="Ha ganado!" Canvas.Left="81" Canvas.Top="110" Height="77" Width="271" Foreground="#FF531D78" FontSize="48" Visibility="Hidden"/>
+    </Canvas>
+</Window>

@@ -6,9 +6,10 @@
 
 Hay de todo, sin un orden particular. 
 
-Definitivamente no son ejemplos de la mejor forma de "resolver" los problemas que plantean los juegos en ciertos aspectos, como por ejemplo los basados en Formularios que necesitan cierto grado fluidez en el manejo graficos y si ciertamente se puede lograr con librerias externas, etc. No es la idea de complicar las cosas.
+Definitivamente no son ejemplos de la mejor forma de "resolver" los problemas que plantean los juegos en ciertos aspectos, como por ejemplo los basados en Formularios que necesitan cierto grado fluidez en el manejo graficos y si ciertamente se puede lograr con librerias externas, etc. la idea No es complicar las cosas agregando capas de dificultad.
 
 La intencion no es optimizar los graficos en esta serie, sino como resolver otros problemas de mecanicas.
+En la mayoría de los casos, tampoco se volvio a refactorear el codigo.
 
 Listado:
 Nombre, Plataforma.
@@ -19,6 +20,7 @@ Ahorcado          | Consola      | NET Core
 Adivina el Numero | Consola      | NET Core
 Dados             | Consola      | NET Core
 BlackJack         | Consola      | NET Core
+MemoTest          | WPF          | NET Framework 4.x
 Sokoban           | Consola      | NET Core
 Torre de Hanoi    | Consola      | NET Core
 Ta Te Ti          | Consola      | NET Core
