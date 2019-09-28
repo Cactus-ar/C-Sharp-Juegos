@@ -14,9 +14,10 @@ En la mayoría de los casos, tampoco se volvio a refactorear el codigo.
 Listado:
 Nombre, Plataforma.
 
-Nombre            | Tipo         | Framework
+Nombre            | Tipo         | Framework (ultima verson testeada)
 ----------------- | ------------ | -------------------
 Ahorcado          | Consola      | NET Core
+CarreraAviones    | Winform      | Net Framework 4.x
 Adivina el Numero | Consola      | NET Core
 Dados             | Consola      | NET Core
 BlackJack         | Consola      | NET Core
