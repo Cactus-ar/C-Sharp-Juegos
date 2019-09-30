@@ -28,6 +28,8 @@ Ta Te Ti          | Consola      | NET Core
 Numeros Lo Shu    | Consola      | NET Core
 Snake             | Winform      | Net Framework 4.x
 Pong              | Winform      | Net Framework 4.x
+Carrera Animales  | Consola      | NET Core
+
 
 
 
