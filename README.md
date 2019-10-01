@@ -27,6 +27,7 @@ Torre de Hanoi    | Consola      | NET Core
 Ta Te Ti          | Consola      | NET Core
 Numeros Lo Shu    | Consola      | NET Core
 Snake             | Winform      | Net Framework 4.x
+Salto Del Caballo | Consola      | NET Core
 Pong              | Winform      | Net Framework 4.x
 Carrera Animales  | Consola      | NET Core
 
