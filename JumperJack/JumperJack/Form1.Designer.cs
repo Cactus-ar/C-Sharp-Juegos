@@ -35,6 +35,7 @@
             this.tmr_Salta = new System.Windows.Forms.Timer(this.components);
             this.tmr_Obstaculos_spawn = new System.Windows.Forms.Timer(this.components);
             this.tmr_obstaculos_mueven = new System.Windows.Forms.Timer(this.components);
+            this.lbl_obstaculos = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pasto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,12 +82,22 @@
             this.tmr_obstaculos_mueven.Enabled = true;
             this.tmr_obstaculos_mueven.Tick += new System.EventHandler(this.Tmr_obstaculos_mueven_Tick);
             // 
+            // lbl_obstaculos
+            // 
+            this.lbl_obstaculos.AutoSize = true;
+            this.lbl_obstaculos.Location = new System.Drawing.Point(454, 32);
+            this.lbl_obstaculos.Name = "lbl_obstaculos";
+            this.lbl_obstaculos.Size = new System.Drawing.Size(35, 13);
+            this.lbl_obstaculos.TabIndex = 4;
+            this.lbl_obstaculos.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(604, 348);
+            this.Controls.Add(this.lbl_obstaculos);
             this.Controls.Add(this.lbl_vidas);
             this.Controls.Add(this.pic_pasto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -110,6 +121,7 @@
         private System.Windows.Forms.Timer tmr_Salta;
         private System.Windows.Forms.Timer tmr_Obstaculos_spawn;
         private System.Windows.Forms.Timer tmr_obstaculos_mueven;
+        private System.Windows.Forms.Label lbl_obstaculos;
     }
 }
 

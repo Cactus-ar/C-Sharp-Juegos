@@ -8,7 +8,7 @@ Hay de todo, sin un orden particular.
 
 Definitivamente no son ejemplos de la mejor forma de "resolver" los problemas que plantean los juegos en ciertos aspectos, como por ejemplo los basados en Formularios que necesitan cierto grado fluidez en el manejo graficos y si ciertamente se puede lograr con librerias externas, etc. la idea No es complicar las cosas agregando capas de dificultad.
 
-TODO: agregar captura de pantallas
+TODO: agregar captura de pantallas / Que funcionalidad puede ser materia de estudio
 
 Listado:
 Nombre, Plataforma.
@@ -30,6 +30,7 @@ Salto Del Caballo | Consola      | NET Core
 Pong              | Winform      | Net Framework 4.x
 Carrera Animales  | Consola      | NET Core
 Ocho Damas        | Consola      | NET Core
+JumperJack        | Winform      | Net Framework 4.x
 
 
 

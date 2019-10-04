@@ -13,7 +13,7 @@ namespace JumperJack
     public partial class Form1 : Form
     {
 
-        Random posy;
+        
         Jugador jugador;
         Obstaculo obst;
         List<Obstaculo> obstaculos;
@@ -22,7 +22,7 @@ namespace JumperJack
         public Form1()
         {
             InitializeComponent();
-            posy = new Random();
+            
             obstaculos = new List<Obstaculo>();
             jugador = new Jugador();
             jugador.Dibujar(this);
@@ -80,11 +80,39 @@ namespace JumperJack
 
         private void Tmr_obstaculos_mueven_Tick(object sender, EventArgs e)
         {
-            foreach (var obsaculo in obstaculos)
+            /*como las listas deben mantener el indice no puede removerse el item segun el criterio
+                     * de forma inmediata. entonces lo meto en otra lista para luego borrarlo-- medio engorroso
+                     * pero no existe una solucion facil */
+
+            List<Obstaculo> auxiliar = new List<Obstaculo>();
+
+            foreach (Obstaculo obsaculo in obstaculos)
             {
                 obsaculo.imagen.Left -= 10;
-                if (obsaculo.imagen.Left <= 0)
-                   obstaculos.Remove(obsaculo);
+                lbl_obstaculos.Text = obstaculos.Count.ToString();
+
+                if (!jugador.imagen.Bounds.IntersectsWith(obsaculo.imagen.Bounds))
+                {
+                    if (obsaculo.imagen.Left <= -50)
+                    {
+                        auxiliar.Add(obsaculo);
+                        obsaculo.imagen.Dispose();
+                        continue;
+                    }
+                }else
+                {
+                    //colision entre jugador y obstaculo de la lista
+                    jugador.Vidas -= 1;
+                    lbl_vidas.Text = jugador.Vidas.ToString();
+                }
+
+                
+                   
+            }
+
+            foreach (Obstaculo aux in auxiliar)
+            {
+                obstaculos.Remove(aux);
             }
         }
     }
