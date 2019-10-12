@@ -1,0 +1,47 @@
+﻿<Window x:Class="CuatroEnLinea.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CuatroEnLinea"
+        mc:Ignorable="d"
+        Title="Cuatro en Línea" Height="654" Width="650" MinWidth="650" MinHeight="654" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" Background="Red" Height="100" VerticalAlignment="Top" Width="644">
+            <Label x:Name="label1" Content="Label" Height="25" Margin="30,0,555,0"/>
+            <Label x:Name="label2" Content="Label" Height="25" Margin="30,0,555,0"/>
+            <Label x:Name="label3" Content="Label" Height="25" Margin="30,0,555,0"/>
+        </StackPanel>
+        <Grid x:Name="grilla" Background="Blue" Margin="0,100,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="Columna_0" Width="*"/>
+                <ColumnDefinition x:Name="Columna_1" Width="*"/>
+                <ColumnDefinition x:Name="Columna_2" Width="*"/>
+                <ColumnDefinition x:Name="Columna_3" Width="*"/>
+                <ColumnDefinition x:Name="Columna_4" Width="*"/>
+                <ColumnDefinition x:Name="Columna_5" Width="*"/>
+                <ColumnDefinition x:Name="Columna_6" Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+
+
+
+
+
+
+
+
+        </Grid>
+
+
+    </Grid>
+</Window>
