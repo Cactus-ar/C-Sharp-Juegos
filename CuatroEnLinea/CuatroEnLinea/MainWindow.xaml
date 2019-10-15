@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="Cuatro en Línea" Height="654" Width="650" MinWidth="650" MinHeight="654" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <StackPanel HorizontalAlignment="Center" Background="Red" Height="100" VerticalAlignment="Top" Width="644">
-            <Label x:Name="label1" Content="Label" Height="25" Margin="30,0,555,0"/>
-            <Label x:Name="label2" Content="Label" Height="25" Margin="30,0,555,0"/>
-            <Label x:Name="label3" Content="Label" Height="25" Margin="30,0,555,0"/>
+        <StackPanel Height="100" VerticalAlignment="Top" Width="644">
+            <Label x:Name="label1" Content="Ganador:" Height="60" FontSize="36" Visibility="Hidden"/>
+            <Button x:Name="btn_init" Content="Reiniciar" Height="28" HorizontalAlignment="Left" Width="114" VerticalAlignment="Top" Margin="265,0" Visibility="Hidden" Click="Btn_init_Click"/>
+            <StackPanel Height="100"/>
         </StackPanel>
         <Grid x:Name="grilla" Background="Blue" Margin="0,100,0,0">
             <Grid.ColumnDefinitions>
@@ -30,15 +30,6 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-
-
-
-
-
-
-
-
-
 
         </Grid>
 

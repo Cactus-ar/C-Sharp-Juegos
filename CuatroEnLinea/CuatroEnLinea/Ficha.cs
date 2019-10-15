@@ -22,15 +22,15 @@ namespace CuatroEnLinea
 
 
         public Ellipse forma;
-        public Point puntos { get; set; }
+        
         public int Columna { get; set; }
         public int Fila { get; set; }
         public Jugador jugador { get; set; }
-        public string Nombre { get; set; }
+        public string Nombre { get; set; } //Nombre no se utiliza, quedo de la depuracion
 
         public Ficha()
         {
-            puntos = new Point();
+        
             forma = new Ellipse
             {
                 Fill = new SolidColorBrush(Colors.White),
