@@ -31,7 +31,7 @@ Pong              | Winform      | Net Framework 4.x
 Carrera Animales  | Consola      | NET Core
 Ocho Damas        | Consola      | NET Core
 JumperJack        | Winform      | Net Framework 4.x
-
+Cuatro en Linea   | WPF          | NET Framework 4.x
 
 
 
